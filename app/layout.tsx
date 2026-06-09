@@ -2,6 +2,9 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { BookingProvider } from '@/lib/booking-context'
+import { BookingDialog } from '@/components/booking-dialog'
+import { Toaster } from '@/components/ui/sonner'
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
 const geistMono = Geist_Mono({
@@ -10,26 +13,10 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Zahnarztpraxis am Markt – Dr. Lena Brandt | Halle (Saale)',
+  description:
+    'Unsichtbare Aligner in Halle (Saale). Gerade Zähne ohne sichtbare Spange – jetzt kostenlose Beratung buchen.',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export default function RootLayout({
@@ -38,9 +25,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="de" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased">
-        {children}
+        <BookingProvider>
+          {children}
+          <BookingDialog />
+          <Toaster />
+        </BookingProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
