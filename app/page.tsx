@@ -8,7 +8,7 @@ import { Pricing } from "@/components/sections/pricing"
 import { SocialProof } from "@/components/sections/social-proof"
 import { Faq } from "@/components/sections/faq"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
-
+import { Footer } from "@/components/footer"
 export default function Page() {
   return (
     <>
@@ -23,6 +23,7 @@ export default function Page() {
         <SocialProof />
         <Faq />
       </main>
+      <Footer />
       <MobileCtaBar />
     </>
   )
