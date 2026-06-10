@@ -7,6 +7,7 @@ import { TreatmentFeatures } from "@/components/sections/treatment-features"
 import { Pricing } from "@/components/sections/pricing"
 import { SocialProof } from "@/components/sections/social-proof"
 import { Faq } from "@/components/sections/faq"
+import { FinalCta } from "@/components/sections/final-cta"
 import { MobileCtaBar } from "@/components/mobile-cta-bar"
 import { Footer } from "@/components/footer"
 export default function Page() {
@@ -22,6 +23,7 @@ export default function Page() {
         <Pricing />
         <SocialProof />
         <Faq />
+        <FinalCta />
       </main>
       <Footer />
       <MobileCtaBar />
