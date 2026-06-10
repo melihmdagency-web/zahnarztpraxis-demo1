@@ -1,7 +1,6 @@
 import { Phone } from "lucide-react"
 import { CtaButton } from "@/components/cta-button"
 import { Reveal } from "@/components/reveal"
-import { Button } from "@/components/ui/button"
 export function FinalCta() {
   return (
     <section className="bg-primary py-16 text-primary-foreground sm:py-24">
@@ -21,16 +20,13 @@ export function FinalCta() {
             label="Kostenlose Beratung buchen"
             className="bg-white text-primary hover:bg-white/90 hover:text-primary shadow-lg"
           />
-         <Button
-            asChild
-            variant="outline"
-            className="h-13 rounded-xl border-white/70 bg-transparent px-7 text-base text-white hover:bg-white/10 hover:text-white sm:h-14 sm:text-lg"
+          
+            href="tel:+493451234567"
+            className="inline-flex h-13 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-white/70 bg-transparent px-7 text-base font-medium text-white transition-colors hover:bg-white/10 sm:h-14 sm:text-lg"
           >
-            <a href="tel:+493451234567" className="inline-flex items-center justify-center gap-2 whitespace-nowrap">
-              <Phone className="size-5 shrink-0" />
-              <span>0345 123 45 67</span>
-            </a>
-          </Button>
+            <Phone className="size-5 shrink-0" />
+            <span>0345 123 45 67</span>
+          </a>
         </Reveal>
       </div>
     </section>
