@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { CtaButton } from "@/components/cta-button"
 import { Reveal } from "@/components/reveal"
 import { SectionHeading } from "@/components/section-heading"
 
@@ -61,9 +60,7 @@ export function Faq() {
           </Accordion>
         </Reveal>
 
-        <Reveal delay={120} className="mt-10 flex justify-center">
-          <CtaButton emphasis="hero" />
-        </Reveal>
+        
       </div>
     </section>
   )
