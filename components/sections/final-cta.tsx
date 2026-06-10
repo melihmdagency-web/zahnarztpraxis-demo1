@@ -1,6 +1,7 @@
 import { Phone } from "lucide-react"
 import { CtaButton } from "@/components/cta-button"
 import { Reveal } from "@/components/reveal"
+
 export function FinalCta() {
   return (
     <section className="bg-primary py-16 text-primary-foreground sm:py-24">
@@ -22,7 +23,7 @@ export function FinalCta() {
           />
           
             href="tel:+493451234567"
-            className="inline-flex h-13 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-white/70 bg-transparent px-7 text-base font-medium text-white transition-colors hover:bg-white/10 sm:h-14 sm:text-lg"
+            className="inline-flex h-14 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-white/70 bg-transparent px-7 text-base font-medium text-white transition-colors hover:bg-white/10"
           >
             <Phone className="size-5 shrink-0" />
             <span>0345 123 45 67</span>
