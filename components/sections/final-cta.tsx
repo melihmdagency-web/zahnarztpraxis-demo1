@@ -21,14 +21,14 @@ export function FinalCta() {
             label="Kostenlose Beratung buchen"
             className="bg-white text-primary hover:bg-white/90 hover:text-primary shadow-lg"
           />
-          <Button
+         <Button
             asChild
             variant="outline"
             className="h-13 rounded-xl border-white/70 bg-transparent px-7 text-base text-white hover:bg-white/10 hover:text-white sm:h-14 sm:text-lg"
           >
-            <a href="tel:+493451234567">
-              <Phone className="size-5" />
-              0345 123 45 67
+            <a href="tel:+493451234567" className="inline-flex items-center justify-center gap-2 whitespace-nowrap">
+              <Phone className="size-5 shrink-0" />
+              <span>0345 123 45 67</span>
             </a>
           </Button>
         </Reveal>
